@@ -22,21 +22,15 @@ public class temperature_humidity_service {
     public temperature_humidity_entity savedata(temperature_humidity_entity TempHum){
         return temperatureHumidityRepository.save(TempHum);
     }
-    /*
-    public HashMap<Object, Object> getlasttemperature(){
+    public HashMap<Object, Object> lastTemp(){
         HashMap<Object, Object> temperature = new HashMap<>();
-        temperature_humidity_entity temperatura = temperatureHumidityRepository.getlasttemperature();
-        temperature.put("Temperatura", temperatura);
-
+        temperature.put("temperatura", temperatureHumidityRepository.lasttemperature());
         return temperature;
     }
-     */
-
-   public temperature_humidity_entity getlastdata(){
-       return temperatureHumidityRepository.getlastdata();
-
-   }
-
-
+    public HashMap<Object, Object> lastHumd(){
+        HashMap<Object, Object> temperature = new HashMap<>();
+        temperature.put("humedad", temperatureHumidityRepository.lasthumidity());
+        return temperature;
+    }
 
 }

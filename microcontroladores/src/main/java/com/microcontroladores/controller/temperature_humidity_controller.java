@@ -20,17 +20,17 @@ public class temperature_humidity_controller {
 
         return temperatureHumidityService.getAlldata();
     }
-    @GetMapping("/Last")
-    public temperature_humidity_entity lasthumidity(){
-        return temperatureHumidityService.getlastdata();
-    }
 
-    /*@GetMapping("/Temp")
+    @GetMapping("/Temp")
     public HashMap<Object, Object> lastemperature(){
-        return temperatureHumidityService.getlasttemperature();
+        return temperatureHumidityService.lastTemp();
     }
 
-     */
+    @GetMapping("/Hum")
+    public HashMap<Object, Object> lasHum(){
+        return temperatureHumidityService.lastHumd();
+    }
+
     @PostMapping
     public temperature_humidity_entity saveDriver(@RequestBody temperature_humidity_entity TemHumd) {
         return temperatureHumidityService.savedata(TemHumd);
