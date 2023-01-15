@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 @RestController
 @RequestMapping("/rele1")
@@ -20,8 +21,14 @@ public class rele1_controller {
 
         return rele1_service.getAllrele1();
     }
+
+    @GetMapping("/status")
+    public HashMap<Object, Object> lastRele1(){
+        return rele1_service.lastRele1();
+    }
+
     @PostMapping
-    public rele1_entity saveDriver(@RequestBody rele1_entity rele1) {
+    public rele1_entity saverele(@RequestBody rele1_entity rele1) {
         return rele1_service.saverele1(rele1);
     }
 }

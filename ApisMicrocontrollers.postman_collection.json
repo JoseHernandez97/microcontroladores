@@ -153,6 +153,46 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "rele1 last status",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/rele1/status",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"rele1",
+								"status"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "rele2 last status",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/rele2/status",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"rele2",
+								"status"
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		},
